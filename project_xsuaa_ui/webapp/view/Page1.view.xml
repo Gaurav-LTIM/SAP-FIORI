@@ -1,0 +1,43 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.btp.projectxsuaaui.controller.Page1" displayBlock="true"><Page id="page" title="{i18n>title}">
+        <content>
+            <Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{path:'/Employees',parameters:{expand:'department'}}">
+                <items>
+                    <ColumnListItem type="Active" id="item0">
+                        <cells>
+                            <Text text="{ID}" id="text2"/>
+                            <Text text="{name}" id="text3"/>
+                            <Text text="{manager}" id="text4"/>
+                            <Text text="{department/dep_name}" id="text5"/></cells>
+                    </ColumnListItem>
+                </items>
+                <columns>
+                    <Column id="column0">
+                        <header>
+                            <Label text="ID" id="label0"/>
+                        </header>
+                    </Column>
+                    <Column id="column1">
+                        <header>
+                            <Label text="Name" id="label1"/>
+                        </header>
+                    </Column>
+                    <Column id="column2">
+                        <header>
+                            <Label text="Manager" id="label2"/>
+                        </header>
+                    </Column>
+                    <Column id="column3">
+                        <header>
+                            <Label text="Department" id="label3"/>
+                        </header>
+                    </Column>
+                </columns>
+            </Table>
+            <List ariaLabelledBy="__xmlview0--label1" noDataText="Drop list items here" id="list0" items="{/Employees}">
+                <items>
+                    <StandardListItem type="Navigation" title="Name" description="{name}" icon="sap-icon://picture" id="item0_1718020959151"   />
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

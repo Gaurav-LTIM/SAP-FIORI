@@ -1,0 +1,147 @@
+<mvc:View controllerName="projectempui.controller.Detail"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    >
+    <Page id="page" title="{i18n>Emptitle}"
+        showNavButton="true" navButtonPress=".onNavBack">
+    <content>
+          <Table id="_IDGenTable1" class="gaurav" items ="{path: 'Employees>/' ,parameters:{expand: 'Department'}}" mode="SingleSelectLeft">
+             <columns>
+                     <Column id="_IDGenColumn14">
+                        <Label id="_IDGenLabel14" text="ID"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn1">
+                        <Label id="_IDGenLabel1" text="Name"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn2">
+                       <Label id="_IDGenLabel2" text="Department ID"></Label>
+                      </Column>
+                      <Column id="_IDGenColumn8">
+                       <Label id="_IDGenLabel8" text="Reports To"></Label>
+                      </Column>
+                      <Column id="_IDGenColumn89">
+                       <Label id="_IDGenLabel89" text="Department Name"></Label>
+                      </Column>
+                     <Column id="_IDGenColumn3">
+                        <Label id="_IDGenLabel3" text="Email_id"></Label>
+                     </Column>
+                     <!-- <Column id="_IDGenColumn4">
+                        <Label id="_IDGenLabel4" text="Created By"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn5">
+                        <Label id="_IDGenLabel5" text="Created At"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn6">
+                        <Label id="_IDGenLabel6" text="Modified By"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn7">
+                        <Label id="_IDGenLabel7" text="Modified At"></Label>
+                     </Column> -->
+                     <Column id="_IDGenColumn9">
+                        <Label id="_IDGenLabel9" text=""></Label>
+                     </Column>
+              </columns>
+ 
+             <items>
+                  <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press=".onNavToDetails"  >
+                        <cells>
+                              <Text id="_IDGenText14" text = "{Employees>ID}"></Text>
+                              <Text id="_IDGenText1" text = "{Employees>name}"></Text>
+                              <Input id="_IDGenText32" value = "{Employees>department_ID}"  editable="false"></Input>
+                              <Input id="_IDGenInput1" value ="{Employees>manager}" editable="false"></Input>
+                               <Text id="_IDGenText2" text = "{Employees>department/dep_name}"  ></Text>
+                              <Text id="_IDGenText3" text = "{Employees>email_id}"></Text>
+                              <!-- <Text id="_IDGenText4" text = "{Employees>createdBy}"></Text>
+                              <Text id="_IDGenText5" text = "{Employees>createdAt}"></Text>
+                              <Text id="_IDGenText6" text = "{Employees>modifiedBy}"></Text>
+                              <Text id="_IDGenText7" text = "{Employees>modifiedAt}"></Text> -->
+                              <HBox id="hbox">
+                              <Button id="_IDGenButton1" icon="sap-icon://edit" text="Edit"  press=".onEdit"/>
+                              <Button id="_IDGenButton2" class="sapUiSmallMarginBeginEnd" type="Reject" icon="sap-icon://delete" text="Delete"  press=".onDelete"/>
+                              </HBox>
+                       </cells>
+                  </ColumnListItem>
+             </items>
+           </Table>
+           <Table id="_IDGenTable21" class="gaurav" items ="{path: 'Employees>/' ,parameters:{expand: 'Department'}}" >
+             <columns>
+                     <!-- <Column id="_IDGenColumn214">
+                        <Label id="_IDGenLabe2l14" text="ID"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn21">
+                        <Label id="_IDGenLabe2l1" text="Name"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn22">
+                       <Label id="_IDGenLabel22" text="Department"></Label>
+                      </Column>
+                      <Column id="_IDGenColumn28">
+                       <Label id="_IDGenLabel28" text="Reports To"></Label>
+                      </Column>
+                      <Column id="_IDGenColumn289">
+                       <Label id="_IDGenLabel289" text="Department Name"></Label>
+                      </Column>
+                     <Column id="_IDGenColumn23">
+                        <Label id="_IDGenLabel23" text="Email_id"></Label>
+                     </Column> -->
+                     <Column id="_IDGenColumn24">
+                        <Label id="_IDGenLabel24" text="Created By"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn25">
+                        <Label id="_IDGenLabel25" text="Created At"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn26">
+                        <Label id="_IDGenLabel26" text="Modified By"></Label>
+                     </Column>
+                     <Column id="_IDGenColumn27">
+                        <Label id="_IDGenLabel27" text="Modified At"></Label>
+                     </Column>
+                     <!-- <Column id="_IDGenColumn29">
+                        <Label id="_IDGenLabel29" text=""></Label>
+                     </Column> -->
+              </columns>
+ 
+             <items>
+                  <ColumnListItem id="_IDGenColumnListItem21" type="Navigation" press=".onNavToDetails"  >
+                        <cells>
+                              <!-- <Text id="_IDGenText214" text = "{Employees>ID}"></Text>
+                              <Text id="_IDGenText21" text = "{Employees>name}"></Text>
+                              <Input id="_IDGenText232" value = "{Employees>department_ID}"  editable="false"></Input>
+                              <Input id="_IDGenInput21" value ="{Employees>manager}" editable="false"></Input>
+                               <Text id="_IDGenText22" text = "{Employees>department/dep_name}"  ></Text>
+                              <Text id="_IDGenText23" text = "{Employees>email_id}"></Text> -->
+                              <Text id="_IDGenText24" text = "{Employees>createdBy}"></Text>
+                              <Text id="_IDGenText25" text = "{Employees>createdAt}"></Text>
+                              <Text id="_IDGenText26" text = "{Employees>modifiedBy}"></Text>
+                              <Text id="_IDGenText27" text = "{Employees>modifiedAt}"></Text>
+                              <!-- <HBox id="hbox2">
+                              <Button id="_IDGenButton21" icon="sap-icon://edit"  press=".onEdit"/>
+                              <Button id="_IDGenButton22" class="sapUiSmallMarginBeginEnd" type="Reject" icon="sap-icon://delete"  press=".onDelete"/>
+                              </HBox> -->
+                       </cells>
+                  </ColumnListItem>
+             </items>
+           </Table>
+           
+    </content>
+         <footer>
+         <Toolbar id="_IDGenToolbar1">
+            <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+           
+ 
+            <Button id="_IDGenButton5" text="Mark as Favorite" press="onPress" visible="{range>/isNoPhone}"/>
+ 
+            <Button id="_IDGenButton6" text="Send Email" press="onPress" visible="{range>/isNoPhone}"/>
+ 
+            <Button id="_IDGenButton7" text="Share" press="onPress" visible="{range>/isNoPhone}"/>
+ 
+            <Button id="_IDGenButton8" text="Print" press="onPress" visible="{range>/isNotPhoneOrTablet}"/>
+            <Button id="_IDGenButton9" icon="sap-icon://print" press="onPress" visible="{range>/isTablet}"/>
+ 
+            <Button id="_IDGenButton10" text="Export as Excel" press="onPress" visible="{range>/isNotPhoneOrTablet}"/>
+ 
+            <Button id="_IDGenButton11" icon="sap-icon://overflow" press="onOpen" visible="{range>/isPhoneOrTablet}"/>
+         </Toolbar>
+      </footer>
+    </Page>    
+</mvc:View>

@@ -1,0 +1,43 @@
+{
+  "name": "project_emp",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "express": "^4",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
+    "@sap/ux-specification": "^1.120.8"
+  },
+  "engines": {
+    "node": "^18"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-project_emp_fiori": "cds watch --open project_emp_fiori/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "features": {
+      "fiori_preview": true
+    },
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": ":memory:"
+        }
+      },
+      "[Production]": {
+        "db": "hana"
+      }
+    }
+  }
+}
