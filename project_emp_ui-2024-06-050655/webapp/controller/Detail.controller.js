@@ -110,7 +110,7 @@ sap.ui.define([
                    
                 },
                 error: function (err) {
-                    MessageBox.error("Error saving data to local database: " + err.responseText);
+                    MessageBox.error("Error Deleting data from local database: " + err.responseText);
                 }
             });
            

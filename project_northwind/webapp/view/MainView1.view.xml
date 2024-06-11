@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap.btp.projectxsuaaui.controller.Page1"
+<mvc:View controllerName="projectnorthwind.controller.MainView1"
 	height="100%"
     xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"

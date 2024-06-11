@@ -5,7 +5,7 @@ sap.ui.define([
 ], function(Fragment, Controller, JSONModel) {
 "use strict";
 
-var PageController = Controller.extend("sap.btp.projectxsuaaui.controller.Page1", {
+var PageController = Controller.extend("projectnorthwind.controller.MainView1", {
 
     onInit: function (oEvent) {
             // set explored app's demo model on this sample
@@ -90,7 +90,7 @@ var PageController = Controller.extend("sap.btp.projectxsuaaui.controller.Page1"
         if (!pFormFragment) {
             pFormFragment = Fragment.load({
                 id: oView.getId(),
-                name: "sap.btp.projectxsuaaui.view." + sFragmentName
+                name: "projectnorthwind.view." + sFragmentName
             });
             this._formFragments[sFragmentName] = pFormFragment;
         }
@@ -112,4 +112,5 @@ var PageController = Controller.extend("sap.btp.projectxsuaaui.controller.Page1"
 return PageController;
 
 });
+
 
